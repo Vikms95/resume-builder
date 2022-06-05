@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/cv-builder/static/js/main.24a609e3.js",
-    "index.html": "/cv-builder/index.html",
-    "main.24a609e3.js.map": "/cv-builder/static/js/main.24a609e3.js.map"
+    "main.js": "/resume-builder/static/js/main.9773586c.js",
+    "index.html": "/resume-builder/index.html",
+    "main.9773586c.js.map": "/resume-builder/static/js/main.9773586c.js.map"
   },
   "entrypoints": [
-    "static/js/main.24a609e3.js"
+    "static/js/main.9773586c.js"
   ]
 }
