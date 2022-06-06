@@ -5,8 +5,10 @@ import { FormSectionHeader, Input, SectionWrapper } from "../styles";
 export default function Personal() {
   const { resume, setResume } = useContext(ResumeContext);
 
-  const { firstName, lastName, email, phone, homeCity, homeState } =
-    resume.personalItems;
+  let firstName, lastName, email, phone, homeCity, homeState;
+  if (resume) {
+    firstName = resume.personalItems.firstName;
+  }
 
   const handleChangePersonal = (e: ChangeEvent) => {
     const { name, value } = e.target as HTMLTextAreaElement;
@@ -21,50 +23,52 @@ export default function Personal() {
   return (
     <>
       <FormSectionHeader>Personal Information</FormSectionHeader>
-      <SectionWrapper flexD="column">
-        <Input
-          type="text"
-          name="firstName"
-          placeholder="First Name"
-          value={firstName}
-          onChange={handleChangePersonal}
-        />
-        <Input
-          type="text"
-          name="lastName"
-          placeholder="Last Name"
-          value={lastName}
-          onChange={handleChangePersonal}
-        />
-        <Input
-          type="text"
-          name="email"
-          placeholder="Email"
-          value={email}
-          onChange={handleChangePersonal}
-        />
-        <Input
-          type="text"
-          name="phone"
-          placeholder="Phone Number"
-          value={phone}
-          onChange={handleChangePersonal}
-        />
-        <Input
-          type="text"
-          name="homeCity"
-          placeholder="City"
-          value={homeCity}
-          onChange={handleChangePersonal}
-        />
-        <Input
-          type="text"
-          name="homeState"
-          placeholder="State"
-          value={homeState}
-          onChange={handleChangePersonal}
-        />
-      </SectionWrapper>
+      {resume && (
+        <SectionWrapper flexD="column">
+          <Input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            value={firstName}
+            onChange={handleChangePersonal}
+          />
+          <Input
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            value={lastName}
+            onChange={handleChangePersonal}
+          />
+          <Input
+            type="text"
+            name="email"
+            placeholder="Email"
+            value={email}
+            onChange={handleChangePersonal}
+          />
+          <Input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            value={phone}
+            onChange={handleChangePersonal}
+          />
+          <Input
+            type="text"
+            name="homeCity"
+            placeholder="City"
+            value={homeCity}
+            onChange={handleChangePersonal}
+          />
+          <Input
+            type="text"
+            name="homeState"
+            placeholder="State"
+            value={homeState}
+            onChange={handleChangePersonal}
+          />
+        </SectionWrapper>
+      )}
     </>
   );
 }

@@ -20,7 +20,7 @@ export default function Skill() {
     });
   };
 
-  const skillElements = resume.skillItems.map((skillItem) => {
+  const skillElements = resume?.skillItems.map((skillItem) => {
     return <SkillForm key={skillItem.id} skillItem={skillItem} />;
   });
 

@@ -6,7 +6,7 @@ import ExperienceItems from "./ExperienceItems";
 export default function Experience() {
   const { resume } = useContext(ResumeContext);
 
-  const experienceElements = resume.experienceItems.map((experienceItem) => {
+  const experienceElements = resume?.experienceItems.map((experienceItem) => {
     return (
       <ExperienceItems
         key={experienceItem.id}

@@ -25,7 +25,7 @@ export default function Education() {
     });
   };
 
-  const educationElements = resume.educationItems.map((educationItem) => {
+  const educationElements = resume?.educationItems.map((educationItem) => {
     return (
       <EducationForm key={educationItem.id} educationItem={educationItem} />
     );

@@ -6,7 +6,7 @@ import EducationItems from "./EducationItems";
 export default function Education() {
   const { resume } = useContext(ResumeContext);
 
-  const educationElements = resume.educationItems.map((educationItem) => {
+  const educationElements = resume?.educationItems.map((educationItem) => {
     return (
       <EducationItems key={educationItem.id} educationItem={educationItem} />
     );

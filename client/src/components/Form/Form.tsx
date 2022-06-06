@@ -1,23 +1,21 @@
 import { useContext } from "react";
 import styled from "styled-components";
 import ResumeContext from "../../context/";
-import { emptyResume, exampleResume } from "../../utils";
 import Education from "./Education/";
 import Experience from "./Experience/";
 import Personal from "./Personal/";
 import Skill from "./Skill";
-import { Button } from "./styles";
 
 export default function Form() {
   const { setResume } = useContext(ResumeContext);
 
-  const handleLoadExample = () => {
-    setResume(exampleResume);
-  };
+  // const handleLoadExample = () => {
+  //   setResume(exampleResume);
+  // };
 
-  const handleReset = () => {
-    setResume(emptyResume);
-  };
+  // const handleReset = () => {
+  //   setResume(emptyResume);
+  // };
 
   return (
     <FormWrapper>
@@ -25,8 +23,8 @@ export default function Form() {
       <Experience />
       <Education />
       <Skill />
-      <Button onClick={handleLoadExample}>Load Example</Button>
-      <Button onClick={handleReset}>Reset</Button>
+      {/* <Button onClick={handleLoadExample}>Load Example</Button>
+      <Button onClick={handleReset}>Reset</Button> */}
     </FormWrapper>
   );
 }

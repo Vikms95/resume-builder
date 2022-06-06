@@ -25,7 +25,7 @@ export default function Experience() {
     });
   };
 
-  const experienceElements = resume.experienceItems.map((experienceItem) => {
+  const experienceElements = resume?.experienceItems.map((experienceItem) => {
     return (
       <ExperienceForm key={experienceItem.id} experienceItem={experienceItem} />
     );

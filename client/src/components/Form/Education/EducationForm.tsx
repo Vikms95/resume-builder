@@ -32,7 +32,7 @@ export default function EducationForm({ educationItem }: Props) {
   };
 
   const handleDeleteEducation = (id: string) => {
-    const newEducation = resume.educationItems.filter((educationItem) => {
+    const newEducation = resume?.educationItems.filter((educationItem) => {
       return educationItem.id !== id;
     });
     setResume({ ...resume, educationItems: [...newEducation] });

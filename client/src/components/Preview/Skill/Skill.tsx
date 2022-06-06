@@ -6,7 +6,7 @@ import SkillItems from "./SkillItems";
 export default function Skill() {
   const { resume } = useContext(ResumeContext);
 
-  const skillElements = resume.skillItems.map((skillItem) => {
+  const skillElements = resume?.skillItems.map((skillItem) => {
     return <SkillItems key={skillItem.id} skillItem={skillItem} />;
   });
 
